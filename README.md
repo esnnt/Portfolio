@@ -59,27 +59,20 @@ Proje, ölçeklenebilir ve temiz bir mimari ile kurgulanmıştır:
 
 ## 📂 Dosya Yapısı (Feature-Based)
 
-src/
+src
+├── components
+│   ├── common        # Ortak küçük bileşenler
+│   ├── layout        # Sayfa düzeni (Navbar, Footer vb.)
+│   └── ui            # Özel efektler (GlitchText, FaultyTerminal, CustomCursor)
 │
-├── components/            # Tekrar kullanılabilir UI bileşenleri
-
-│   ├── common/            # Ortak kullanılan küçük bileşenler
-
-│   ├── layout/            # Sayfa düzeni bileşenleri (Navbar, Footer vb.)
-
-│   └── ui/                # Özel efektler (GlitchText, FaultyTerminal, CustomCursor)
-
+├── data              # JSON formatında proje & yetenek verileri
 │
-├── data/                  # Proje ve yetenek verileri (JSON formatında)
-
+├── features          # Sayfa bölümleri (Hero, Skills, Projects, Contact)
 │
-├── features/              # Sayfa bölümleri (Hero, Skills, Projects, Contact)
+├── hooks             # Custom Hooks (useUISound vb.)
 │
-├── hooks/                 # Custom Hooks (örn. useUISound)
-│
-├── App.jsx                # Ana düzen + Global efektlerin yönetimi
-│
-└── index.css              # Global stiller + Responsive ayarları
+├── App.jsx           # Ana düzen + global efektler
+└── index.css         # Global stiller + responsive ayarları
 
 * *Projeler:* src/data/projects.js (Başlık, açıklama, resim/video yolları)
 * *Yetenekler:* src/data/skills.js (İkonlar ve seviyeler)
