@@ -58,7 +58,22 @@ Projeyi yerel makinenizde çalıştırmak için şu adımları izleyin:
 ## 📂 Dosya Yapısı (Feature-Based)
 
 Proje, ölçeklenebilir ve temiz bir mimari ile kurgulanmıştır:
-src/ ├── components/ # Tekrar kullanılabilir UI bileşenleri (Carousel, Navbar vb.) │ ├── common/ │ ├── layout/ │ └── ui/ # Özel efektler (GlitchText, FaultyTerminal, CustomCursor) ├── data/ # Proje ve yetenek verileri (JSON formatında) ├── features/ # Sayfa bölümleri (Hero, Skills, Projects, Contact) ├── hooks/ # Custom Hooks (useUISound vb.) ├── App.jsx # Ana düzen ve Global Efektler └── index.css # Global stiller ve Responsive ayarları
+src/
+│
+├── components/            # Tekrar kullanılabilir UI bileşenleri
+│   ├── common/            # Ortak kullanılan küçük bileşenler
+│   ├── layout/            # Sayfa düzeni bileşenleri (Navbar, Footer vb.)
+│   └── ui/                # Özel efektler (GlitchText, FaultyTerminal, CustomCursor)
+│
+├── data/                  # Proje ve yetenek verileri (JSON formatında)
+│
+├── features/              # Sayfa bölümleri (Hero, Skills, Projects, Contact)
+│
+├── hooks/                 # Custom Hooks (örn. useUISound)
+│
+├── App.jsx                # Ana düzen + Global efektlerin yönetimi
+│
+└── index.css              # Global stiller + Responsive ayarları
 
 * *Projeler:* src/data/projects.js (Başlık, açıklama, resim/video yolları)
 * *Yetenekler:* src/data/skills.js (İkonlar ve seviyeler)
