@@ -82,7 +82,7 @@ src/
 * *Projeler:* src/data/projects.js (Başlık, açıklama, resim/video yolları)
 * *Yetenekler:* src/data/skills.js (İkonlar ve seviyeler)
 * *İletişim:* src/features/contact/Contact.jsx (Sosyal medya linkleri)
-
+```
 ## 🤝 Katkıda Bulunanlar
 
 * *Development:* Mehmet Sönmez [(https://github.com/mehmet2725)]
