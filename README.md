@@ -55,9 +55,10 @@ Projeyi yerel makinenizde çalıştırmak için şu adımları izleyin:
 
 4.  Tarayıcınızda http://localhost:5173 adresine gidin.
 
+Proje, ölçeklenebilir ve temiz bir mimari ile kurgulanmıştır:
+
 ## 📂 Dosya Yapısı (Feature-Based)
 
-Proje, ölçeklenebilir ve temiz bir mimari ile kurgulanmıştır:
 src/
 │
 ├── components/            # Tekrar kullanılabilir UI bileşenleri
