@@ -1,5 +1,7 @@
 # 🎮 Unity Game Developer Portfolio
 
+*Canlı Demo:* [https://esintekin.vercel.app/](https://esintekin.vercel.app/) 🚀
+
 Modern, yüksek performanslı ve "Cyberpunk/Game Dev" estetiğine sahip, *React* ve *WebGL* teknolojileriyle geliştirilmiş profesyonel portfolyo web sitesi.
 
 ![Hero Section Preview](public/images/hero-preview.png)
@@ -12,6 +14,7 @@ Bu proje, standart bir web sitesinden ziyade bir *oyun arayüzü (UI)* hissiyat�
 * *🎨 Cyberpunk & Glitch Teması:* Özel piksell fontlar, neon efektler ve "Faulty Terminal" arka planı.
 * *🎥 Hibrit Slider:* Proje kartlarında hem resim hem de video (mp4) oynatabilen özel Carousel yapısı.
 * *📱 Tam Responsive:* clamp() fonksiyonları ile her ekran boyutuna (Mobil, Tablet, PC) mükemmel uyum.
+* *🔊 Ses Efektleri:* Menü ve buton etkileşimleri için özel SFX (Game Feel).
 
 ![Projects Section Preview](public/images/projects-preview.png)
 
