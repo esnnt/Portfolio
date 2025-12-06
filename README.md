@@ -1,16 +1,67 @@
-# React + Vite
+# 🎮 Unity Game Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern, yüksek performanslı ve "Cyberpunk/Game Dev" estetiğine sahip, *React* ve *WebGL* teknolojileriyle geliştirilmiş profesyonel portfolyo web sitesi.
 
-Currently, two official plugins are available:
+![Hero Section Preview](public/images/hero-preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Özellikler
 
-## React Compiler
+Bu proje, standart bir web sitesinden ziyade bir *oyun arayüzü (UI)* hissiyatı vermek üzere tasarlanmıştır:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* *⚡ Ultra Performans:* WebGL (OGL) tabanlı arka plan efektleri, mobil cihazlar için optimize edilmiştir.
+* *🎨 Cyberpunk & Glitch Teması:* Özel piksell fontlar, neon efektler ve "Faulty Terminal" arka planı.
+* *🎥 Hibrit Slider:* Proje kartlarında hem resim hem de video (mp4) oynatabilen özel Carousel yapısı.
+* *📱 Tam Responsive:* clamp() fonksiyonları ile her ekran boyutuna (Mobil, Tablet, PC) mükemmel uyum.
 
-## Expanding the ESLint configuration
+![Projects Section Preview](public/images/projects-preview.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Teknolojiler
+
+* *Core:* [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+* *Styling:* Modern CSS (Glassmorphism, Grid Layout)
+* *Animations:* [Framer Motion](https://www.framer.com/motion/), [GSAP](https://gsap.com/)
+* *WebGL:* [OGL](https://github.com/oframe/ogl) (Performanslı 3D arka plan için)
+* *Icons:* [React Icons](https://react-icons.github.io/react-icons/)
+
+## 🚀 Gelişmiş Animasyonlar
+
+* *Preloader:* "System Initializing" tarzı sinematik açılış ekranı.
+* *Scroll Reveal:* Aşağı kaydırdıkça bulanıktan netleşen içerikler.
+* *Text Effects:* BlurText, GlitchText, Shuffle ve Typewriter efektleri.
+* *Custom Cursor:* Oyun hissi veren, etkileşimli özel mouse imleci.
+
+## 📦 Kurulum ve Çalıştırma
+
+Projeyi yerel makinenizde çalıştırmak için şu adımları izleyin:
+
+1.  *Depoyu Klonlayın:*
+    bash
+    git clone [https://github.com/esnnt/unity-portfolio.git](https://github.com/esnnt/unity-portfolio.git)
+    cd unity-portfolio
+    
+
+2.  *Bağımlılıkları Yükleyin:*
+    bash
+    npm install
+    
+
+3.  *Geliştirme Sunucusunu Başlatın:*
+    bash
+    npm run dev
+    
+
+4.  Tarayıcınızda http://localhost:5173 adresine gidin.
+
+## 📂 Dosya Yapısı (Feature-Based)
+
+Proje, ölçeklenebilir ve temiz bir mimari ile kurgulanmıştır:
+src/ ├── components/ # Tekrar kullanılabilir UI bileşenleri (Carousel, Navbar vb.) │ ├── common/ │ ├── layout/ │ └── ui/ # Özel efektler (GlitchText, FaultyTerminal, CustomCursor) ├── data/ # Proje ve yetenek verileri (JSON formatında) ├── features/ # Sayfa bölümleri (Hero, Skills, Projects, Contact) ├── hooks/ # Custom Hooks (useUISound vb.) ├── App.jsx # Ana düzen ve Global Efektler └── index.css # Global stiller ve Responsive ayarları
+
+* *Projeler:* src/data/projects.js (Başlık, açıklama, resim/video yolları)
+* *Yetenekler:* src/data/skills.js (İkonlar ve seviyeler)
+* *İletişim:* src/features/contact/Contact.jsx (Sosyal medya linkleri)
+
+## 🤝 Katkıda Bulunanlar
+
+* *Development:* Mehmet Sönmez [(https://github.com/mehmet2725)]
+* *Design & Content:* Esin Tekin 
