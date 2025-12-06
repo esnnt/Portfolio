@@ -1,0 +1,100 @@
+/* Ana Kapsayıcı: 16:9 Oranında Sabitliyoruz */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* SİNEMA FORMATI: En önemli ayar bu */
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* İçerik Alanı */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Her Bir Slayt */
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Resim/Video Ayarı */
+.carousel-media {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Resmi kesmeden sığdır (Boşluk kalırsa siyah olur) */
+  /* Eğer boşluk kalmasın, dolu görünsün istersen 'cover' yap */
+}
+
+/* --- BUTONLAR --- */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.nav-btn:hover {
+  background: #14b8ff;
+  color: #000;
+  border-color: #14b8ff;
+  box-shadow: 0 0 15px rgba(20, 184, 255, 0.6);
+}
+
+.nav-btn:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.nav-btn.left { left: 10px; }
+.nav-btn.right { right: 10px; }
+
+/* --- NOKTALAR --- */
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dot.active {
+  background: #14b8ff;
+  transform: scale(1.2);
+}

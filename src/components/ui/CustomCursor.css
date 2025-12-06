@@ -1,0 +1,54 @@
+/* Varsayılan fareyi gizle */
+body {
+  cursor: none;
+}
+
+/* Linklerin üzerinde de gizle */
+a, button, .pill, .social-card, .glitch {
+  cursor: none !important;
+}
+
+/* --- ANA İMLEÇ (NOKTA) --- */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #14b8ff; /* Neon Mavi */
+  border-radius: 50%;
+  position: fixed;
+  top: -4px; /* Ortalamak için yarısı kadar geri çekiyoruz */
+  left: -4px;
+  z-index: 9999;
+  pointer-events: none; /* Tıklamaları engellemesin */
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+/* --- TAKİPÇİ (HALKA) --- */
+.cursor-follower {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(20, 184, 255, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  z-index: 9998;
+  pointer-events: none;
+  transition: transform 0.1s ease-out, width 0.3s, height 0.3s, border-color 0.3s, background-color 0.3s;
+  will-change: transform; /* Performans için */
+}
+
+/* --- HOVER DURUMU (Büyüme Efekti) --- */
+.cursor-dot.hovered {
+  width: 0px; /* Nokta kaybolsun */
+  height: 0px;
+}
+
+.cursor-follower.hovered {
+  width: 60px; /* Halka büyüsün */
+  height: 60px;
+  top: -30px;
+  left: -30px;
+  background-color: rgba(162, 89, 255, 0.1); /* Mor dolgu */
+  border-color: #a259ff; /* Mor kenar */
+  border-width: 2px;
+}

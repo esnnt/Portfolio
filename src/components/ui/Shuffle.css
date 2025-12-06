@@ -1,0 +1,7 @@
+.shuffle-char {
+  display: inline-block;
+  white-space: pre;
+}
+.is-ready {
+  visibility: visible;
+}

@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* --- TEMEL AYARLAR --- */
+:root {
+  --bg-color: #0d0f14;
+  --panel-color: #111317;
+  --text-main: #e7e9ec;
+  --accent-blue: #14b8ff;
+  --accent-purple: #a259ff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  /* Yatay kaymayı engelle */
+}
+
+/* --- HERO ÖZEL STİLLERİ --- */
+
+/* "Merhaba, ben" Yazısı */
+.text-small {
+  font-size: 1.5rem;
+  color: #ccc;
+  display: flex;
+  justify-content: center;
+}
+
+/* "ESİN TEKİN" Yazısı (Varsayılan Masaüstü) */
+.text-name {
+  font-size: 6rem;
+  /* Masaüstü boyutu */
+  font-weight: 800;
+  color: #a259ff;
+  text-shadow: 0 0 20px rgba(162, 89, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+/* --- GENEL BİLEŞENLER --- */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Butonlar */
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--accent-blue);
+  color: #000;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent-purple);
+  color: var(--accent-purple);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* --- SECTIONS (BÖLÜMLER) --- */
+
+.section-header {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.section-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  color: #888;
+  max-width: 600px;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* --- SKILLS GRID --- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 3rem;
+}
+
+.skill-card {
+  background: rgba(13, 15, 20, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card:hover {
+  background: rgba(20, 184, 255, 0.1);
+  border-color: #14b8ff;
+  box-shadow: 0 0 15px rgba(20, 184, 255, 0.3);
+  transform: translateX(5px);
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+  transition: border-color 0.3s;
+}
+
+.skill-card:hover::before {
+  border-color: transparent #14b8ff transparent transparent;
+}
+
+.skill-icon {
+  font-size: 2rem;
+  color: var(--text-main);
+  transition: transform 0.3s;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.1);
+}
+
+.skill-info h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.skill-info span {
+  font-size: 0.75rem;
+  color: #888;
+  font-family: monospace;
+}
+
+/* --- PROJECTS GRID --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  align-items: stretch;
+}
+
+.project-card {
+  background: rgba(13, 15, 20, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card:hover {
+  border-color: #a259ff;
+  box-shadow: 0 0 20px rgba(162, 89, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.project-image-wrapper {
+  width: 100%;
+  height: auto;
+  /* Yüksekliği serbest bırak, Carousel halledecek */
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-description {
+  color: #aaa;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.tag-badge {
+  font-family: monospace;
+  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ccc;
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.project-card:hover .tag-badge {
+  border-color: #a259ff;
+  color: #fff;
+}
+
+/* --- CONTACT CARDS --- */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.social-card {
+  background: rgba(13, 15, 20, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.social-icon-large {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.social-card:hover .social-icon-large {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.social-name {
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.social-action {
+  font-size: 0.8rem;
+  color: #888;
+  font-family: monospace;
+}
+
+.social-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--hover-color, #fff);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.social-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* --- NAVBAR STİLLERİ --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(13, 15, 20, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* --- SCROLLBAR & SELECTION --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050608;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #14b8ff, #a259ff);
+  border-radius: 4px;
+  border: 2px solid #050608;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+::selection {
+  background: #a259ff;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(162, 89, 255, 0.8);
+}
+
+::-moz-selection {
+  background: #a259ff;
+  color: #fff;
+}
+
+/* --- MOBİL VE PERFORMANS AYARLARI (SON VE KESİN) --- */
+
+/* Varsayılan: Mobil arka plan gizli */
+.mobile-bg {
+  display: none;
+}
+
+/* 768px ve altı (Tüm Telefonlar) */
+@media (max-width: 768px) {
+
+  /* 1. Performans Ayarı */
+  .desktop-bg {
+    display: none !important;
+  }
+
+  .mobile-bg {
+    display: block !important;
+  }
+
+  /* 2. SADECE ESİN TEKİN YAZISI (Özel Class) */
+  /* Diğer hiçbir yazıya dokunmaz, sadece bunu büyütür */
+  .text-name {
+    font-size: 2rem !important;
+    line-height: 1.1 !important;
+    display: block !important;
+    margin-bottom: 20px !important;
+    font-weight: 800 !important;
+  }
+
+  /* 3. DİĞER TÜM YAZILAR (Normal Boyutta Kalsın) */
+  p,
+  span,
+  div.text-type,
+  .project-description,
+  .section-subtitle {
+    font-size: 1.2rem !important;
+    /* Normale döndü */
+    line-height: 1.8 !important;
+  }
+
+  /* 4. Glitch Text (Unity Developer) */
+  .glitch {
+    font-size: 1.2rem !important;
+    white-space: normal !important;
+    text-align: center;
+  }
+
+  /* 5. Bölüm Başlıkları */
+  .section-title {
+    font-size: 1.5rem !important;
+  }
+
+  /* 6. Kart Düzeni */
+  .projects-grid,
+  .skills-grid,
+  .social-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    padding: 0 5px;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  section {
+    padding: 30px 0 !important;
+  }
+
+  .project-image-wrapper {
+    height: auto !important;
+    /* Sabit yüksekliği iptal et */
+    aspect-ratio: 16 / 9;
+    /* Genişliğe göre sinema oranı ver */
+  }
+}
