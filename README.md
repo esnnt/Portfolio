@@ -62,11 +62,16 @@ Proje, ölçeklenebilir ve temiz bir mimari ile kurgulanmıştır:
 src/
 │
 ├── components/            # Tekrar kullanılabilir UI bileşenleri
+
 │   ├── common/            # Ortak kullanılan küçük bileşenler
+
 │   ├── layout/            # Sayfa düzeni bileşenleri (Navbar, Footer vb.)
+
 │   └── ui/                # Özel efektler (GlitchText, FaultyTerminal, CustomCursor)
+
 │
 ├── data/                  # Proje ve yetenek verileri (JSON formatında)
+
 │
 ├── features/              # Sayfa bölümleri (Hero, Skills, Projects, Contact)
 │
