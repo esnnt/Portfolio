@@ -57,22 +57,27 @@ Projeyi yerel makinenizde çalıştırmak için şu adımları izleyin:
 
 Proje, ölçeklenebilir ve temiz bir mimari ile kurgulanmıştır:
 
-## 📂 Dosya Yapısı (Feature-Based)
+## 📂 Dosya Yapısı
 
-src
-├── components
-│   ├── common        # Ortak küçük bileşenler
-│   ├── layout        # Sayfa düzeni (Navbar, Footer vb.)
-│   └── ui            # Özel efektler (GlitchText, FaultyTerminal, CustomCursor)
-│
-├── data              # JSON formatında proje & yetenek verileri
-│
-├── features          # Sayfa bölümleri (Hero, Skills, Projects, Contact)
-│
-├── hooks             # Custom Hooks (useUISound vb.)
-│
-├── App.jsx           # Ana düzen + global efektler
-└── index.css         # Global stiller + responsive ayarları
+Proje, sürdürülebilir ve modüler bir *Feature-Based* mimari ile kurgulanmıştır:
+
+```text
+src/
+├── assets/               # Statik görseller ve ikonlar
+├── components/           # Tekrar kullanılabilir parçalar
+│   ├── common/           # Genel bileşenler (Button vb.)
+│   ├── layout/           # Sayfa düzeni (Navbar, Footer, PillNav)
+│   └── ui/               # Özel efektler (GlitchText, FaultyTerminal, Carousel, vb.)
+├── data/                 # Veri katmanı (projects.js, skills.js)
+├── features/             # Sayfa bölümleri
+│   ├── contact/          # İletişim bölümü
+│   ├── hero/             # Giriş ekranı (Animasyonlu İsim)
+│   ├── projects/         # Proje vitrini
+│   └── skills/           # Yetenekler grid yapısı
+├── hooks/                # Özel kancalar (useUISound.js)
+├── App.jsx               # Ana uygulama ve Global Arka Plan
+├── main.jsx              # React giriş noktası
+└── index.css             # Global stiller, Fontlar ve Responsive ayarları
 
 * *Projeler:* src/data/projects.js (Başlık, açıklama, resim/video yolları)
 * *Yetenekler:* src/data/skills.js (İkonlar ve seviyeler)
