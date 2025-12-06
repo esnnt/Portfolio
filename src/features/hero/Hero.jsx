@@ -64,7 +64,7 @@ const Hero = () => {
               textTransform: 'uppercase'
             }}
           >
-            UNITY GAME DEVELOPER
+            JR UNITY GAME DEVELOPER
           </GlitchText>
         </div>
 
