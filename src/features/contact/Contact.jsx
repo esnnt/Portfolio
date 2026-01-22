@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'; // FaGamepad'i sildik çünkü Itch.io kalktı
+import { FaGithub, FaLinkedin, FaEnvelope, FaItchIo } from 'react-icons/fa'; // FaGamepad'i sildik çünkü Itch.io kalktı
 import ScrollReveal from '../../components/ui/ScrollReveal';
 
 const Contact = () => {
@@ -26,6 +26,13 @@ const Contact = () => {
       icon: FaEnvelope,
       url: 'mailto:esintekin1012@gmail.com',
       color: '#ea4335'
+    },
+    {
+      name: 'ITCH.IO',
+      action: 'Play Games',
+      icon: FaItchIo,
+      url: 'https://esinn.itch.io/',
+      color: '#fa5c5c'
     }
   ];
 

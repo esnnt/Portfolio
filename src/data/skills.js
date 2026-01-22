@@ -18,8 +18,7 @@ export const skillCategories = [
     description: "Görsel kalite ve optimizasyon",
     skills: [
       { name: "URP / HDRP", icon: BsGpuCard, level: "Beginner", color: "#2196f3" }, // Giriş Seviyesi
-      { name: "Shader Graph", icon: FaLayerGroup, level: "Intermediate", color: "#00bcd4" }, 
-      { name: "Particle System", icon: FaVrCardboard, level: "Intermediate", color: "#e91e63" },
+      { name: "Shader Graph", icon: FaLayerGroup, level: "Beginner", color: "#00bcd4" }, 
       { name: "Lighting & Baking", icon: FaCube, level: "Beginner", color: "#ff5722" }, // Giriş Seviyesi
     ]
   },

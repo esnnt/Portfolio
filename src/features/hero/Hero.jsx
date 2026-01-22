@@ -2,6 +2,8 @@ import React from 'react';
 import BlurText from '../../components/ui/BlurText';
 import TextType from '../../components/ui/TextType';
 import GlitchText from '../../components/ui/GlitchText';
+import Button from '../../components/common/Button'; // Düzenlediğimiz buton
+import { FaFileDownload } from 'react-icons/fa'; // İkon
 
 const Hero = () => {
   return (
@@ -26,7 +28,6 @@ const Hero = () => {
         {/* --- İSİM ALANI --- */}
         <div style={{ marginBottom: '30px' }}>
           
-          {/* Merhaba, ben */}
           <div style={{ marginBottom: '10px' }}>
              <BlurText 
               text="Merhaba, ben" 
@@ -37,7 +38,6 @@ const Hero = () => {
             />
           </div>
 
-          {/* ESİN TEKİN */}
           <div style={{ height: 'auto', overflow: 'visible' }}>
             <BlurText 
               text="Esin Tekin" 
@@ -78,7 +78,8 @@ const Hero = () => {
           fontWeight: '500',
           fontFamily: 'sans-serif',
           lineHeight: '1.6',
-          textShadow: '0 2px 4px rgba(0,0,0,0.8)'
+          textShadow: '0 2px 4px rgba(0,0,0,0.8)',
+          marginBottom: '40px' // Buton için boşluk
         }}>
           <TextType
             text={[
@@ -93,6 +94,20 @@ const Hero = () => {
             showCursor={true}
             cursorCharacter="|"
           />
+        </div>
+
+        {/* --- SADECE CV BUTONU --- */}
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+          <a 
+            href="/Esin_Tekin_CV.pdf" 
+            download="Esin_Tekin_CV.pdf"
+            style={{ textDecoration: 'none' }}
+          >
+            <Button variant="primary">
+              <FaFileDownload size={16} />
+              DOWNLOAD CV
+            </Button>
+          </a>
         </div>
 
       </div>
